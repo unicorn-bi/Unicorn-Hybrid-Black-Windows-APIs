@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnicornDotNet</name>
+    </assembly>
+    <members>
+        <member name="T:Gtec.Unicorn.DeviceException">
+            <summary>
+            The exception that is thrown when an error occured using the g.Unicorn C-API.
+            </summary>
+        </member>
+        <member name="P:Gtec.Unicorn.DeviceException.ErrorCode">
+            <summary>
+            Gets the error code of the device exception.
+            </summary>
+        </member>
+        <member name="M:Gtec.Unicorn.DeviceException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gtec.Unicorn.DeviceException"/> class.
+            </summary>
+        </member>
+        <member name="M:Gtec.Unicorn.DeviceException.#ctor(Gtec.Unicorn.Unicorn.ErrorCodes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gtec.Unicorn.DeviceException"/> class with a specified error code.
+            </summary>
+            <param name="errorCode">The error code returned from the C-API.</param>
+        </member>
+        <member name="M:Gtec.Unicorn.DeviceException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gtec.Unicorn.DeviceException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Gtec.Unicorn.DeviceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gtec.Unicorn.DeviceException"/> class with a speficied error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException"/> parameter is not a <i>null</i> reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="M:Gtec.Unicorn.DeviceException.#ctor(Gtec.Unicorn.Unicorn.ErrorCodes,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gtec.Unicorn.DeviceException"/> class with a specified error code and error message.
+            </summary>
+            <param name="errorCode">The error code returned from the C-API.</param>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Gtec.Unicorn.DeviceException.#ctor(Gtec.Unicorn.Unicorn.ErrorCodes,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gtec.Unicorn.DeviceException"/> class with a specified error code and error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="errorCode">The error code returned from the C-API.</param>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException"/> parameter is not a <i>null</i> reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="T:Gtec.Unicorn.Unicorn">
+            <summary>
+            Class wrapping the .NET interface.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DllName">
+            <summary>
+            Filename of the Unicorn API dll-file.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.SupportedDeviceVersion">
+            <summary>
+            The Unicorn device version that is valid for this API.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.RecommendedDeviceName">
+            <summary>
+            The device name of the recommended (delivered) Bluetooth adapter.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.RecommendedDeviceManufacturer">
+            <summary>
+            The manufacturer of the recommended (delivered) Bluetooth adapter.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.SerialLengthMax">
+            <summary>
+            The maximum length of the serial number, including the terminating null character.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DeviceVersionLengthMax">
+            <summary>
+            The maximum length of the device version, including the terminating null character.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.FirmwareVersionLengthMax">
+            <summary>
+            The maximum length of the firmware version, including the terminating null character.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.StringLengthMax">
+            <summary>
+            The maximum string length.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.SamplingRate">
+            <summary>
+            The sampling rate of the amplifier.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.EEGChannelsCount">
+            <summary>
+            The number of available EEG channels.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.AccelerometerChannelsCount">
+            <summary>
+            The number of available accelerometer channels.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.GyroscopeChannelsCount">
+            <summary>
+            The number of available gyroscope channels.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.TotalChannelsCount">
+            <summary>
+            The total number of available channels.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.EEGConfigIndex">
+            <summary>
+            Index of the first EEG <see cref="T:Gtec.Unicorn.Unicorn.AmplifierChannel"/> in <see cref="F:Gtec.Unicorn.Unicorn.AmplifierConfiguration.Channels"/>.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.AccelerometerConfigIndex">
+            <summary>
+            Index of the first accelerometer <see cref="T:Gtec.Unicorn.Unicorn.AmplifierChannel"/> in <see cref="F:Gtec.Unicorn.Unicorn.AmplifierConfiguration.Channels"/>.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.GyroscopeConfigIndex">
+            <summary>
+            Index of the first gyroscope <see cref="T:Gtec.Unicorn.Unicorn.AmplifierChannel"/> in <see cref="F:Gtec.Unicorn.Unicorn.AmplifierConfiguration.Channels"/>.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.BatteryConfigIndex">
+            <summary>
+            Index of the Battery <see cref="T:Gtec.Unicorn.Unicorn.AmplifierChannel"/> in <see cref="F:Gtec.Unicorn.Unicorn.AmplifierConfiguration.Channels"/>.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.CounterConfigIndex">
+            <summary>
+            Index of the Counter <see cref="T:Gtec.Unicorn.Unicorn.AmplifierChannel"/> in <see cref="F:Gtec.Unicorn.Unicorn.AmplifierConfiguration.Channels"/>.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ValidationConfigIndex">
+            <summary>
+            Index of the Validation Indicator <see cref="T:Gtec.Unicorn.Unicorn.AmplifierChannel"/> in <see cref="F:Gtec.Unicorn.Unicorn.AmplifierConfiguration.Channels"/>.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.NumberOfDigitalOutputs">
+            <summary>
+            The number of digital output channels.
+            </summary>
+        </member>
+        <member name="T:Gtec.Unicorn.Unicorn.ErrorCodes">
+            <summary>
+            The error codes that the Unicorn API can return.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.Success">
+            <summary>
+            The operation completed successfully. No error occurred.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.InvalidParameter">
+            <summary>
+            One of the specified parameters does not contain a valid value.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.BluetoothInitFailed">
+            <summary>
+            The initialization of the Bluetooth adapter failed.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.BluetoothSocketFailed">
+            <summary>
+            The operation could not be performed because the Bluetooth socket failed.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.OpenDeviceFailed">
+            <summary>
+            The device could not be opened.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.InvalidConfiguration">
+            <summary>
+            The configuration is invalid.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.BufferOverflow">
+            <summary>
+            The acquisition buffer is full.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.BufferUnderflow">
+            <summary>
+            The acquisition buffer is empty.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.OperationNotAllowed">
+            <summary>
+            The operation is not allowed during acquisition or non-acquisition.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.ConnectionProblem">
+            <summary>
+            The operation could not complete because of connection problems.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.UnsupportedDevice">
+            <summary>
+            The device is not supported with this API <see cref="F:Gtec.Unicorn.Unicorn.SupportedDeviceVersion"/> .
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.InvalidHandle">
+            <summary>
+            The specified connection handle is invalid.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.ErrorCodes.UnknownError">
+            <summary>
+            An unspecified error occurred.
+            </summary>
+        </member>
+        <member name="T:Gtec.Unicorn.Unicorn.AmplifierChannel">
+            <summary>
+            The structure containing information about a single channel of the amplifier.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.AmplifierChannel.Name">
+            <summary>
+            The channel name.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.AmplifierChannel.Unit">
+            <summary>
+            The channel unit.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.AmplifierChannel.Range">
+            <summary>
+            The channel range as float array. First entry min value; Second max value.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.AmplifierChannel.Enabled">
+            <summary>
+            The channel enabled flag. True to enable channel; False to disable channel.
+            </summary>
+        </member>
+        <member name="T:Gtec.Unicorn.Unicorn.AmplifierConfiguration">
+            <summary>
+            The structure containing the amplifier configuration.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.AmplifierConfiguration.Channels">
+            <summary>
+            An array of <see cref="T:Gtec.Unicorn.Unicorn.AmplifierChannel"/>  representing all channels.
+            </summary>
+        </member>
+        <member name="T:Gtec.Unicorn.Unicorn.DeviceInformation">
+            <summary>
+            The structure that holds additional information about the device.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DeviceInformation.NumberOfEegChannels">
+            <summary>
+            The number of EEG channels.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DeviceInformation.Serial">
+            <summary>
+            The serial number of the device.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DeviceInformation.FwVersion">
+            <summary>
+            The firmware version number.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DeviceInformation.DeviceVersion">
+            <summary>
+            The device version number.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DeviceInformation.PcbVersion">
+            <summary>
+            The PCB version number.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.DeviceInformation.EnclosureVersion">
+            <summary>
+            The enclosure version number.
+            </summary>
+        </member>
+        <member name="T:Gtec.Unicorn.Unicorn.BluetoothAdapterInfo">
+            <summary>
+            The structure that holds information about the Bluetooth adapter.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.BluetoothAdapterInfo.Name">
+            <summary>
+            The name of the Bluetooth adapter used.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.BluetoothAdapterInfo.Manufacturer">
+            <summary>
+            The manufacturer of the Bluetooth adapter.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.BluetoothAdapterInfo.IsRecommendedDevice">
+            <summary>
+            The flag indicating if the used Bluetooth adapter is a recommended (delivered) device. True if the adapter is a recommended device; False if the adapter is not a recommended device.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn.BluetoothAdapterInfo.HasProblem">
+            <summary>
+            Indicates whether the Bluetooth adapter has reported a problem or not. True if the adapter reported a problem; False if the adapter behaves as supposed.
+            </summary>
+        </member>
+        <member name="F:Gtec.Unicorn.Unicorn._hDevice">
+            <summary>
+            The handle associated with the session.
+            </summary>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.Dispose(System.Boolean)">
+            <summary>
+            Closes the devices and frees memory.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetApiVersion">
+            <summary>
+            Returns the current API version.
+            </summary>
+            <returns>The current API version.</returns>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetBluetoothAdapterInfo">
+            <summary>
+            Evaluates which Bluetooth adapter is currently in use and whether it is the recommended (delivered) Bluetooth adapter or not.
+            </summary>
+            <returns>Information about the used Bluetooth adapter as <see cref="T:Gtec.Unicorn.Unicorn.BluetoothAdapterInfo"/></returns>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Bluetooth adapter information could not be acquired.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetAvailableDevices(System.Boolean)">
+            <summary>
+            Discovers paired or available devices. Estimates the number of paired or available devices and returns information about discovered devices.
+            </summary>
+            <param name="discoverPairedDevicesOnly"> 
+            Defines whether only paired devices or only unpaired devices should be returned.If only unpaired devices should be returned, an extensive device scan is performed.
+            An extensive device scan takes a rather long time. In the meantime, the Bluetooth adapter and the application are blocked. Scanning for paired devices only can be executed faster.
+            If true, only paired devices are discovered.If false, only unpaired devices can be discovered.</param>
+            <returns>List holding available devices.</returns>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Devices could not be acquired.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gtec.Unicorn.Unicorn"/> class.
+            Connects to a certain Unicorn device by it's serial number.
+            </summary>
+            <param name="serial">The serial number of the device to connect.</param>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Device could not be opened.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.Dispose">
+            <summary>
+            Disconnects from a device and releases allocated memory.
+            </summary>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.StartAcquisition(System.Boolean)">
+            <summary>
+            Starts a data acquisition in testsignal or measurement mode.
+            </summary>
+            <param name="testsignalEnabled">Enables or disables the test signal mode. If true testsignal mode is enabled. If false measurement mode is enabled.</param>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Data acquisition could not be started.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.StopAcquisition">
+            <summary>
+            Terminates a running data acquisition.
+            </summary>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Data acquisition could not be stopped.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.SetConfiguration(Gtec.Unicorn.Unicorn.AmplifierConfiguration@)">
+            <summary>
+            Sets an amplifier configuration <see cref="T:Gtec.Unicorn.Unicorn.AmplifierConfiguration"/>.
+            </summary>
+            <param name="configuration">The <see cref="T:Gtec.Unicorn.Unicorn.AmplifierConfiguration"/> to set.</param>
+            <exception cref="T:Gtec.Unicorn.DeviceException">The configuration is invalid or could not be set.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetConfiguration">
+            <summary>
+            Retrieves the current amplifier configuration from the device as <see cref="T:Gtec.Unicorn.Unicorn.AmplifierConfiguration"/>.
+            </summary>
+            <returns>The <see cref="T:Gtec.Unicorn.Unicorn.AmplifierConfiguration"/> which stores the configuration of the amplifier.</returns>
+            <exception cref="T:Gtec.Unicorn.DeviceException">The current amplifier configuration could not be read.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetData(System.UInt32,System.IntPtr,System.UInt32)">
+            <summary>
+            Reads a specific number of scans into the specified destination buffer of known length. Checks whether the destination buffer is big enough to hold the requested number of scans.
+            </summary>
+            <param name="numberOfScans">
+            The number of scans to read. The number of scans must be greater than zero. A scan consists of one 32-bit floating point number for each currently acquired channel.</param>
+            <param name="destinationBuffer">
+            A pointer to the native block of memory that receives the acquired data.The destination buffer must provide enough memory to hold the requested number of scans multiplied by the number of acquired channels.
+            Call <see cref="M:Gtec.Unicorn.Unicorn.GetNumberOfAcquiredChannels"/> to determine the number of acquired channels. Call <see cref="M:Gtec.Unicorn.Unicorn.GetChannelIndex(System.String)"/>  to determine the index of a channel within a scan.
+            Example: The sample of the battery level channel in the n-th scan is: n* GetNumberOfAcquiredChannels()+GetChannelIndex("Battery Level")</param>
+            <param name="destinationBufferLength">The number of floats fitting into the destination buffer.</param>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Data could not be read.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetChannelIndex(System.String)">
+            <summary>
+            Uses the currently set <see cref="T:Gtec.Unicorn.Unicorn.AmplifierConfiguration"/> to get the index of the requested channel in an acquired scan.
+            </summary>
+            <param name="name">
+            The name of the requested channel.
+            The default names are:
+               EEG 1|2|3|4|5|6|7|8
+               Accelerometer X|Y|Z
+               Gyroscope X|Y|Z
+               Counter
+               Battery Level
+               Validation Indicator
+            </param>
+            <returns>The index of the requested channel in an acquired scan.</returns>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Channel index could not be determined.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetNumberOfAcquiredChannels">
+            <summary>
+            Get number of acquired channels according to the currently set amplifier configuration.
+            </summary>
+            <returns>The number of acquired channels.</returns>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Number of acquired channels could not be determined.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetDeviceInformation">
+            <summary>
+            Reads the device information.
+            </summary>
+            <returns>A <see cref="T:Gtec.Unicorn.Unicorn.DeviceInformation"/> which holds information about the device.</returns>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Device information could not be read.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.SetDigitalOutputs(System.Byte)">
+            <summary>
+            Sets the digital outputs to high or low.
+            </summary>
+            <param name="digitalOutputs">
+            The digital output states in bits. Each bit represents one digital output channel.
+            If a bit is set, the corresponding digital output channel’s value is
+            set to high.If a bit is cleared, the corresponding digital output
+            channel’s value is set to low.
+            Examples (the binary representation of each decimal value is shown in parentheses): 
+               0   (0b00000000) -> all digital outputs set to low.
+               170 (0b10101010) -> digital outputs 2,4,6,8 are set to high.
+               255 (0b11111111) -> all digital outputs set to high.</param>
+            <exception cref="T:Gtec.Unicorn.DeviceException">Digital outputs could not be set.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.GetDigitalOutputs">
+            <summary>
+            Reads the digital output states.
+            </summary>
+            <returns> The state of the digital output channels to set in bits. Each bit represents one digital output channel.Set a bit to set the 
+            corresponding digital output channel’s value to high.Clear a bit to set the corresponding digital output channel’s value to low.
+            Examples (the binary representation of each decimal value is shown in parentheses): 
+               0   (0b00000000) -> all digital outputs set to low.
+               170 (0b10101010) -> digital outputs 2,4,6,8 are set to high.
+               255 (0b11111111) -> all digital outputs set to high.</returns>
+             <exception cref="T:Gtec.Unicorn.DeviceException">Digital outputs could not be read.</exception>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.HandleError(Gtec.Unicorn.Unicorn.ErrorCodes)">
+            <summary>
+            Raises an exception if <see cref="T:Gtec.Unicorn.Unicorn.ErrorCodes"/> represents an error.
+            </summary>
+            <param name="errorCode">The <see cref="T:Gtec.Unicorn.Unicorn.ErrorCodes"/> object to check for an error.</param>
+            <exception cref="T:Gtec.Unicorn.DeviceException"><paramref name="errorCode"/> represents an error.</exception>
+            <remarks>A <see cref="T:Gtec.Unicorn.Unicorn.ErrorCodes"/> object is considered to represent an error if it's <see cref="T:Gtec.Unicorn.Unicorn.ErrorCodes"/> value does not equal <see cref="F:Gtec.Unicorn.Unicorn.ErrorCodes.Success"/>.</remarks>
+        </member>
+        <member name="M:Gtec.Unicorn.Unicorn.IsDeviceLibraryLoadable">
+            <summary>
+            Determines whether all libraries required for device communication are installed.
+            </summary>
+            <returns><i>True</i> if all required libraries are installed; otherwise, <i>false</i>.</returns>
+            <remarks>Determines whether all the native DLLs specified in the <see cref="T:System.Runtime.InteropServices.DllImportAttribute"/> can be loaded. Depending on all public or non-public static methods of the specified type and its base types.</remarks>
+        </member>
+    </members>
+</doc>
