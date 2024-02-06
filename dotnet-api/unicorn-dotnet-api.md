@@ -24,23 +24,32 @@ API
 
 ## Setting up a project using Visual Studio 2022
 1. Open Visual Studio 2022.
-2. Create a new C# Console application (File → New → Project → Visual C#).
-<br/><br/>
+2. Create a new C# Console application (Console App (.NET Framework)).
+<br/>
 <p align="center">
 <img src="./img/dotnetapi1.png" alt="drawing" width="750"/><br/>
 </p>
-<br/><br/>
 <p align="center">
 <img src="./img/dotnetapi2.png" alt="drawing" width="750"/><br/>
 </p>
 
 3. Open the Configuration Manager and set the “Active solution platform” and project “Platform” to “x64”
-4. Open the project properties dialog (Project → Properties).
-5. Set the target framework to “.NET Framework 4.8”.
-6. Select “Add Reference” by right clicking “References” in the Solution Explorer
-<br/><br/>
+<br/>
 <p align="center">
 <img src="./img/dotnetapi3.png" alt="drawing" width="750"/><br/>
+</p>
+
+4. Open the project properties dialog (Project → Properties).
+5. Set the target framework to “.NET Framework 4.8”.
+<br/>
+<p align="center">
+<img src="./img/dotnetapi4.png" alt="drawing" width="750"/><br/>
+</p>
+
+6. Select “Add Reference” by right clicking “References” in the Solution Explorer
+<br/>
+<p align="center">
+<img src="./img/dotnetapi5.png" alt="drawing" width="350"/><br/>
 </p>
 
 7. Browse to the library path of the Unicorn .NET API (by default C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn DotNet\Lib) and add “UnicornDotNet.dll” as reference.
@@ -61,11 +70,6 @@ namespace UnicornNetAcquisitionExample
 }
  ```
 
-<br/><br/>
-<p align="center">
-<img src="./img/dotnetapi4.png" alt="drawing" width="750"/><br/>
-</p>
-
 9.  You must copy the native Unicorn library (by default C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn DotNet\Lib\Unicorn.dll) to the execution folder of the C# application. This can be done manually or within the “Build Events” by adding the following ines to the Pre- or Post-build event command Lines
 
 ```
@@ -78,7 +82,7 @@ DotNet\Lib\Unicorn.dll" "$(TargetDir)"
 To perform a data acquisition using the Unicorn .NET API, a defined command execution order is required.
 
 <p align="center">
-<img src="./img/acquisition_loop.svg" alt="drawing" width="350"/><br/>
+<img src="./img/acquisition_loop.svg" alt="drawing" width="300"/><br/>
 </p>
 
 1.  Before connecting to a Unicorn device, it is possible to check the operating environment of Unicorn devices and to discover available devices.
