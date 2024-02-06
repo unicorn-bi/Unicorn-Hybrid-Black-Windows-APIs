@@ -14,5 +14,5 @@ This repository hosts detailed documentation for Windows APIs tailored for use w
 [Simulink Interface](simulink-interface/unicorn-simulink-interface.md)<br/>
 
 
-## Operating System Requirements Requirements
+## Operating System Requirements
 - Windows 11 Pro, English, 64bit
