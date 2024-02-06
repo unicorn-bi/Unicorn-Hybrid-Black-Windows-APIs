@@ -3,7 +3,6 @@ The Unicorn .NET API is a .NET application programming interface (API) that enab
 
 [Requirements](#Requirements)<br/>
 [Files on your computer](#Files-on-your-computer)<br/>
-[Using the Unicorn .NET Api](#Using-the-Unicorn-NET-Api)<br/>
 [Setting up a project using Visual Studio 2022](#Setting-up-a-project-using-Visual-Studio-2022)</br>
 [Command Order](#Command-Order)</br>
 [Unicorn .NET API Video Tutorial](#Unicorn-NET-API-Video-Tutorial)</br>
@@ -95,7 +94,7 @@ To perform a data acquisition using the Unicorn .NET API, a defined command exec
 
 6. The device gets disconnected as soon as the garbage collector finalizes the corresponding class instance, or Dispose is called. Afterwards, it is not possible to interact with the device anymore. The device must be opened again for interaction.
 
-## Unicorn .NET API Video Tutorial
+## Unicorn .NET API Video Tutorial<a name="Unicorn-NET-API-Video-Tutorial"></a>
 <div align="center">
 
 [![Unicorn Hybrid Black Tutorial: Dev Tools - .NET API](https://img.youtube.com/vi/U8xWlIyY4DI/0.jpg)](https://youtu.be/U8xWlIyY4DI "Unicorn Hybrid Black Tutorial: Dev Tools - .NET API")
