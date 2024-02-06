@@ -1,4 +1,4 @@
-# UNICORN C API
+# UNICORN .NET API
 The Unicorn C API is a C/C++ application programming interface (API) enabling the communication with 
 Unicorn brain interfaces from C/C++ applications. The Unicorn C API allows users to acquire data from 
 Unicorn Brain Interfaces easily without having to take care of low-level data acquisition issues. The raw 
