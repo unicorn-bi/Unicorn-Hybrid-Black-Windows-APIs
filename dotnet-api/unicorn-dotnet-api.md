@@ -24,7 +24,7 @@ API
 
 ## Setting up a project using Visual Studio 2022
 1. Open Visual Studio 2022.
-2.   Create a new C# Console application (File → New → Project → Visual C#).
+2. Create a new C# Console application (File → New → Project → Visual C#).
 <br/><br/>
 <p align="center">
 <img src="./img/dotnetapi1.png" alt="drawing" width="750"/><br/>
@@ -34,8 +34,8 @@ API
 <img src="./img/dotnetapi2.png" alt="drawing" width="750"/><br/>
 </p>
 
-3.  Open the Configuration Manager and set the “Active solution platform” and project “Platform” to “x64”
-4.  Open the project properties dialog (Project → Properties).
+3. Open the Configuration Manager and set the “Active solution platform” and project “Platform” to “x64”
+4. Open the project properties dialog (Project → Properties).
 5. Set the target framework to “.NET Framework 4.8”.
 6. Select “Add Reference” by right clicking “References” in the Solution Explorer
 <br/><br/>
@@ -43,7 +43,7 @@ API
 <img src="./img/dotnetapi3.png" alt="drawing" width="750"/><br/>
 </p>
 
-7.  Browse to the library path of the Unicorn .NET API (by default C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn DotNet\Lib) and add “UnicornDotNet.dll” as reference.
+7. Browse to the library path of the Unicorn .NET API (by default C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn DotNet\Lib) and add “UnicornDotNet.dll” as reference.
 8. Add “using Gtec.Unicorn” to the top of each file using the Unicorn .NET API.
 
 ```
