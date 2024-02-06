@@ -15,6 +15,4 @@ This repository hosts detailed documentation for Windows APIs tailored for use w
 
 
 ## Operating System Requirements Requirements
-| Software           | Properties                               |
-| :----------------- | :--------------------------------------- |
-| Operating System   | Windows 11 Pro <br/> English <br/> 64bit |
+- Windows 11 Pro, English, 64bit

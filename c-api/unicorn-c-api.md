@@ -12,24 +12,18 @@ binary data stream is converted into numerical values such that the user receive
 [Unicorn C API Video Tutorial](#Unicorn-C-API-Video-Tutorial)</br>
 [C API Reference](./unicorn-c-api-reference.md)</br>
 ## Requirements
-<div align="left">
 
-| Software        | Properties          |
-| :--------------- | :------------------- |
-| Visual Studio   | Microsoft Visual Studio 2022 <br/> Desktop development for the C++ programming 
-language |
-
-</div>
+- Visual Studio<br/> Microsoft Visual Studio 2022, Desktop development for the C++ programming language
 
 ## Files on your computer
 By default, the Unicorn C API library is installed into the Documents folder.
-<div align="left">
+- C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn CAPI<br/>Standard installation folder for the Unicorn C API 
+library
 
-| Path        | Description          |
-| :--------------- | :------------------- |
-| C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn CAPI | Standard installation folder for the Unicorn C API library |
+Within this directory, subdirectories are generated containing all installed files
+- .\Lib<br/>Contains the Unicorn C API for Windows 64-bit
+- .\Examples<br/>Contains application examples for the Unicorn C API 
 
-</div>
 
 ## Using the Unicorn C Api
 There are several possibilities to refer to the Unicorn C API files from your individual project
