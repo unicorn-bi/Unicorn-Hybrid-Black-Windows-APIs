@@ -224,7 +224,7 @@ EXCEPTIONS<br/>
  Determines whether all libraries required for device communication are installed.
 
 RETURNS:<br/>
-True if all required native libraries are installed and can be loaded; otherwise false.
+- True if all required native libraries are installed and can be loaded; otherwise false.
 
 ### Functions
 #### Dispose
@@ -249,7 +249,7 @@ The default names are: <br/>
  Validation Indicator<br/>
 
 RETURNS<br/>
-The zero-based index of the requested channel in an acquired scan.
+- The zero-based index of the requested channel in an acquired scan.
 EXCEPTIONS<br/>
 - [DeviceException](#Class-DeviceException)<br/>
 The channel index could not be determined.
@@ -260,7 +260,7 @@ AmplifierConfiguration GetConfiguration()
 Retrieves the current Unicorn Brain Interface configuration from the device.
 
 RETURNS<br/>
-The configuration of the Unicorn Brain Interface.
+- The configuration of the Unicorn Brain Interface.
 
 EXCEPTIONS<br/>
 - [DeviceException](#Class-DeviceException)<br/>
