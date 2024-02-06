@@ -61,14 +61,17 @@ Suite\Unicorn CAPI\Hybrid Black\Lib) to the “Additional Include Directories”
 
 ```
 #include "stdafx.h"
+
 // Include unicorn header-file.
 #include "unicorn.h"
+
 // Include unicorn lib.
 #pragma comment(lib, "Unicorn.lib")
+
 int main()
 {
- // Insert your code here.
- return 0;
+    // Insert your code here.
+    return 0;
 }
 ```
 
