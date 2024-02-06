@@ -5,3 +5,4 @@ This repository hosts detailed documentation for Windows APIs tailored for use w
 [C API](c-api/unicorn-c-api.md)<br/>
 [.NET API](dotnet-api/unicorn-dotnet-api.md)<br/>
 [Python API](python-api/unicorn-python-api.md)<br/>
+[Simulink Interface](simulink-interface/unicorn-simulink-interface.md)<br/>
