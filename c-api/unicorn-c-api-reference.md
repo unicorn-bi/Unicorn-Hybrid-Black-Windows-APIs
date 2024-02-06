@@ -4,23 +4,22 @@
 [Type Definitions](#Type-Definitions)<br/>
 [Structures](#Structures)<br/>
 [Functions](#Functions)<br/>
-
-[Close Device](#Close-Device)<br/>
-[Get API Version](#Get-API-Version)<br/>
-[Get Available Devices](#Get-Available-Devices)<br/>
-[Get Bluetooth Adapter Info](#Get-Bluetooth-Adapter-Info)<br/>
-[Get Channel Index](#Get-Channel-Index)<br/>
-[Get Configuration](#Get-Configuration)<br/>
-[Get Data](#Get-Data)<br/>
-[Get Device Information](#Get-Device-Information)<br/>
-[Get Digital Outputs](#Get-Digital-Outputs)<br/>
-[Get Last Error Text](#Get-Last-Error-Text)<br/>
-[Get Number of Acquired Channels](#Get-Number-of-Acquired-Channels)<br/>
-[Open Device](#Open-Device)<br/>
-[Set Configuration](#Set-Configuration)<br/>
-[Set Digital Outputs](#Set-Digital-Outputs)<br/>
-[Start Acquisition](#Start-Acquisition)<br/>
-[Stop Acquisition](#Stop-Acquisition)<br/>
+&nbsp;&nbsp;&nbsp;[Close Device](#Close-Device)<br/>
+&nbsp;&nbsp;&nbsp;[Get API Version](#Get-API-Version)<br/>
+&nbsp;&nbsp;&nbsp;[Get Available Devices](#Get-Available-Devices)<br/>
+&nbsp;&nbsp;&nbsp;[Get Bluetooth Adapter Info](#Get-Bluetooth-Adapter-Info)<br/>
+&nbsp;&nbsp;&nbsp;[Get Channel Index](#Get-Channel-Index)<br/>
+&nbsp;&nbsp;&nbsp;[Get Configuration](#Get-Configuration)<br/>
+&nbsp;&nbsp;&nbsp;[Get Data](#Get-Data)<br/>
+&nbsp;&nbsp;&nbsp;[Get Device Information](#Get-Device-Information)<br/>
+&nbsp;&nbsp;&nbsp;[Get Digital Outputs](#Get-Digital-Outputs)<br/>
+&nbsp;&nbsp;&nbsp;[Get Last Error Text](#Get-Last-Error-Text)<br/>
+&nbsp;&nbsp;&nbsp;[Get Number of Acquired Channels](#Get-Number-of-Acquired-Channels)<br/>
+&nbsp;&nbsp;&nbsp;[Open Device](#Open-Device)<br/>
+&nbsp;&nbsp;&nbsp;[Set Configuration](#Set-Configuration)<br/>
+&nbsp;&nbsp;&nbsp;[Set Digital Outputs](#Set-Digital-Outputs)<br/>
+&nbsp;&nbsp;&nbsp;[Start Acquisition](#Start-Acquisition)<br/>
+&nbsp;&nbsp;&nbsp;[Stop Acquisition](#Stop-Acquisition)<br/>
 
 ## Constants
 ####  UNICORN_ACCELEROMETER_CHANNELS_COUNT<br/>
