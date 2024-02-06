@@ -170,7 +170,7 @@ The enclosure version number.
 ### Constructors
 Unicorn(string serial)
 
-Initializes a new instance of the [Unicorn](#Unicorn) class. Connects to the Unicorn device with the specified serial number. [Unicorn](#Unicorn) class instances can be finalized explicitly by calling [Dispose](#Dispose)() to disconnect from devices and deallocate memory. Otherwise, the device gets disconnected as soon as the garbage collector finalizes the corresponding class instance.
+Initializes a new instance of the [Unicorn](#Class-Unicorn) class. Connects to the Unicorn device with the specified serial number. [Unicorn](#Class-Unicorn) class instances can be finalized explicitly by calling [Dispose](#Dispose)() to disconnect from devices and deallocate memory. Otherwise, the device gets disconnected as soon as the garbage collector finalizes the corresponding class instance.
 
 PARAMETERS
 - serial<br/>
