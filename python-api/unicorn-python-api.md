@@ -84,5 +84,4 @@ To perform a data acquisition using the Unicorn Python API, a defined command ex
 
 [![Unicorn Hybrid Black Tutorial: Python API](https://img.youtube.com/vi/N0d_B0jergs/0.jpg)](https://youtu.be/N0d_B0jergs "Unicorn Hybrid Black Tutorial: Python API")
 
-
 </div>
