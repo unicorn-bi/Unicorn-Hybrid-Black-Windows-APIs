@@ -78,7 +78,7 @@ DotNet\Lib\Unicorn.dll" "$(TargetDir)"
 To perform a data acquisition using the Unicorn .NET API, a defined command execution order is required.
 
 <p align="center">
-<img src="./img/dotnetapi5.png" alt="drawing" width="350"/><br/>
+<img src="./img/acquisition_loop.svg" alt="drawing" width="350"/><br/>
 </p>
 
 1.  Before connecting to a Unicorn device, it is possible to check the operating environment of Unicorn devices and to discover available devices.

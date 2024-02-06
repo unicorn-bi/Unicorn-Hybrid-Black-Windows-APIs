@@ -1,8 +1,5 @@
 # UNICORN C API
-The Unicorn C API is a C/C++ application programming interface (API) enabling the communication with 
-Unicorn brain interfaces from C/C++ applications. The Unicorn C API allows users to acquire data from 
-Unicorn Brain Interfaces easily without having to take care of low-level data acquisition issues. The raw 
-binary data stream is converted into numerical values such that the user receives data ready to analyze.
+The Unicorn C API is a C/C++ application programming interface (API) enabling the communication with Unicorn brain interfaces from C/C++ applications. The Unicorn C API allows users to acquire data from Unicorn Brain Interfaces easily without having to take care of low-level data acquisition issues. The raw binary data stream is converted into numerical values such that the user receives data ready to analyze.
 
 [Requirements](#Requirements)<br/>
 [Files on your computer](#Files-on-your-computer)<br/>
@@ -62,7 +59,8 @@ Suite\Unicorn CAPI\Hybrid Black\Lib) to the “Additional Include Directories”
 
 9. Add the header file and the library file of the Unicorn C API as follows:
 
-```#include "stdafx.h"
+```
+#include "stdafx.h"
 // Include unicorn header-file.
 #include "unicorn.h"
 // Include unicorn lib.
@@ -77,7 +75,7 @@ int main()
 ## Command Order
 To perform a data acquisition using the Unicorn C API, a defined command execution order is required.
 <p align="center">
-<img src="./img/capi5.png" alt="drawing" width="350"/><br/>
+<img src="./img/acquisition_loop.svg" alt="drawing" width="350"/><br/>
 </p>
 
 1. Before connecting to a Unicorn Brain Interface, it is possible to check the operating environment 
