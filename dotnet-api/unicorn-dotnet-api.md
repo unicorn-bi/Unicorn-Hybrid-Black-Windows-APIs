@@ -3,10 +3,10 @@ The Unicorn .NET API is a .NET application programming interface (API) that enab
 
 [Requirements](#Requirements)<br/>
 [Files on your computer](#Files-on-your-computer)<br/>
-[Using the Unicorn .NET Api](#Using-the-Unicorn-.NET-Api)<br/>
+[Using the Unicorn .NET Api](#Using-the-Unicorn-NET-Api)<br/>
 [Setting up a project using Visual Studio 2022](#Setting-up-a-project-using-Visual-Studio-2022)</br>
 [Command Order](#Command-Order)</br>
-[Unicorn .NET API Video Tutorial](#Unicorn-.NET-API-Video-Tutorial)</br>
+[Unicorn .NET API Video Tutorial](#Unicorn-NET-API-Video-Tutorial)</br>
 [.NET API Reference](./unicorn-dotnet-api-reference.md)</br>
 ## Requirements
 
