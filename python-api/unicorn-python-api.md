@@ -33,24 +33,31 @@ You must add the Unicorn Python library paths to the system environment variable
 1. Open the “System Properties” and go to the “Advanced” tab.
 
 <p align="center">
-<img src="./img/dotnetapi1.png" alt="drawing" width="750"/><br/>
+<img src="./img/pythonapi1.png" alt="drawing" width="350"/><br/>
 </p>
 
 2. Click “Environment Variables” and add a new “System variable” called PYTHONPATH pointing to the Unicorn Python library folder.
 
 <p align="center">
-<img src="./img/dotnetapi2.png" alt="drawing" width="750"/><br/>
+<img src="./img/pythonapi2.png" alt="drawing" width="600"/><br/>
 </p>
 
 3.  It should be possible to load the library by typing “import UnicornPy” in Python after adding the library folder to the python path.
 
 <p align="center">
-<img src="./img/dotnetapi3.png" alt="drawing" width="750"/><br/>
+<img src="./img/pythonapi3.png" alt="drawing" width="750"/><br/>
 </p>
 
 ## Setting up a project using Visual Studio 2022
 1. Open Visual Studio 2022.
-2. Create a new Python application (File → New → Project → Python).
+2. Create a new Python application.
+<p align="center">
+<img src="./img/pythonapi4.png" alt="drawing" width="750"/><br/>
+</p>
+<p align="center">
+<img src="./img/pythonapi5.png" alt="drawing" width="750"/><br/>
+</p>
+
 3. Make sure that the library path is set as described in '[Set library path](#Set-library-path)'.
 4. Import the Unicorn Python API by importing the library with “import UnicornPy”
 
