@@ -150,3 +150,197 @@ PUBLIC ATTRIBUTES
    The enclosure version number.
 
 ## Functions
+####  Close Device
+int UNICORN_CloseDevice(UNICORN_HANDLE *hDevice)<br/>
+
+Closes a Unicorn Brain Interface.<br/>
+Disconnects from a Unicorn Brain Interface by a given Unicorn handle.<br/>
+
+PARAMETERS<br/>
+- hDevice<br/>
+A pointer to the handle associated with the session.<br/>
+
+RETURNS<br/>
+An error code is returned as an integer if the disconnection attempt fails
+
+####  Get API Version
+float UNICORN_GetApiVersion()
+
+Returns the current API version.<br/>
+
+RETURNS<br/>
+The current API version.
+
+####  Get Available Devices
+int UNICORN_GetAvailableDevices(UNICORN_DEVICE_SERIAL *availableDevices, uint32_t 
+*availableDevicesCount, BOOL onlyPaired)<br/>
+
+Scans for available Unicorn Brain Interfaces.<br/>
+Discovers available paired or unpaired Unicorn Brain Interfaces. Estimates the number of available paired or unpaired Unicorn Brain Interfaces and returns information about discovered Unicorn Brain Interfaces. <br/>
+
+PARAMETERS<br/>
+- availableDevices<br/>
+A pointer to the beginning of an array of UNICORN_DEVICE_SERIAL, which receives available Unicorn Brain Interfaces when the method returns. If NULL is passed, the number of available devices is returned only to determine the amount of memory to allocate.
+- availableDevicesCount<br/>
+A pointer to a variable that receives the number of available devices.
+- onlyPaired<br/>
+Defines whether only paired devices or only unpaired devices should be 
+returned. If only unpaired devices should be returned, an extensive device 
+scan is performed. An extensive device scan takes a rather long time. In 
+the meantime, the Bluetooth adapter and the application are blocked. 
+Scanning for paired devices only can be executed faster. If TRUE, only paired devices are discovered. If FALSE, only unpaired devices can be 
+discovered.<br/>
+
+RETURNS<br/>
+An error code is returned as integer if scanning for available devices fails.<br/>
+
+#### Get Bluetooth Adapter Info
+int UNICORN_GetBluetoothAdapterInfo(UNICORN_BLUETOOTH_ADAPTER_INFO *bluetoothAdapterInfo)
+
+Retrieves information about the used Bluetooth Adapter.
+Evaluates which Bluetooth adapter is currently in use and whether it is the recommended (delivered) Bluetooth adapter.
+
+PARAMETERS<br/>
+- bluetoothAdapterInfo<br/>
+A pointer to a UNICORN_BLUETOOTH_ADAPTER_INFO structure that 
+receives information about the used Bluetooth adapter<br/>
+
+RETURNS<br/>
+An error code is returned as integer if the Bluetooth adapter information could not be acquired.
+
+#### Get Channel Index
+int UNICORN_GetChannelIndex(UNICORN_HANDLE hDevice, const char *name, uint32_t *channelIndex)
+
+Determines the index of the requested channel within an acquired scan.
+Uses the currently set UNICORN_AMPLIFIER_CONFIGURATION to get the index of the requested channel within an acquired scan.
+
+The default names are:
+- EEG 1|2|3|4|5|6|7|8
+- Accelerometer X|Y|Z
+- Gyroscope X|Y|Z
+- Counter
+- Battery Level
+- Validation Indicator
+
+PARAMETERS<br/>
+- hDevice<br/>
+The UNICORN_HANDLE associated with the session.
+- name<br/>
+The name of the requested channel.
+- channelIndex<br/>
+A pointer to a variable that receives the zero-based channel index.
+
+RETURNS<br/>
+An error code is returned as integer if the index could not be determined.
+
+####  Get Configuration
+int UNICORN_GetConfiguration(UNICORN_HANDLE hDevice, UNICORN_AMPLIFIER_CONFIGURATION *configuration)
+
+Gets the current Unicorn Brain Interface configuration.
+Retrieves the current Unicorn Brain Interface configuration from the device as 
+UNICORN_AMPLIFIER_CONFIGURATION.
+
+PARAMETERS<br/>
+- hDevice<br/>
+The UNICORN_HANDLE associated with the session.
+- configuration<br/>
+A pointer to a UNICORN_AMPLIFIER_CONFIGURATION that receives the configuration of the Unicorn Brain Interface.
+
+RETURNS<br/>
+An error code is returned as an integer if the configuration could not be read.
+
+#### Get Data
+int UNICORN_GetData(UNICORN_HANDLE hDevice, uint32_t numberOfScans, float *destinationBuffer, uint32_t destinationBufferLength)
+
+Reads a specific number of scans into the specified destination buffer of known length. Checks whether the destination buffer is big enough to hold the requested number of scans.
+
+PARAMETERS<br/>
+- hDevice <br/>
+The UNICORN_HANDLE associated with the session.
+- numberOfScans<br/>
+The number of scans to read. The number of scans must be greater than zero. A scan consists of one 32-bit floating point number for each currently acquired channel.
+- destinationBuffer<br/>
+A pointer to the destination buffer that receives the acquired data. The destination buffer must provide enough memory to hold the requested number of scans multiplied by the number of acquired channels.
+Call UNICORN_GetNumberOfAcquiredChannels to determine the number of acquired channels. Call UNICORN_GetChannelIndex to determine the index of a channel within a scan. Example: The sample of the battery level channel in the n-th scan is: <br/>
+n*UNICORN_GetNumberOfAcquiredChannels()+UNICORN_GetChannelIndex(“
+Battery Level”)
+- destinationBufferLength<br/>
+Number of floats fitting into the destination buffer.
+
+RETURNS<br/>
+An error code is returned as integer if data could not be read. 
+
+#### Get Device Information
+int UNICORN_GetDeviceInformation(UNICORN_HANDLE hDevice, UNICORN_DEVICE_INFORMATION* deviceInformation)
+
+Reads the device information by a given UNICORN_HANDLE.
+
+PARAMETERS<br/>
+- hDevice <br/>
+The UNICORN_HANDLE associated with the session.
+- deviceInformation<br/>
+A pointer to a UNICORN_DEVICE_INFORMATION that receives information 
+about the device.
+
+RETURNS<br/>
+An error code is returned as an integer if the device information could not be read.
+
+#### Get Digital Outputs
+int UNICORN_GetDigitalOutputs(UNICORN_HANDLE hDevice, uint8_t *digitalOutputs)
+
+Reads the current state of the digital outputs.
+
+PARAMETERS<br/>
+- hDevice <br/>
+The UNICORN_HANDLE associated with the session.
+- digitalOutputs<br/>
+A pointer to a variable that receives the states of the digital output channels. Each bit represents one digital output channel. If a bit is set, the corresponding digital output channel’s value is set to high. If a bit is cleared, the corresponding digital output channel’s value is set to low.<br/><br/>
+Examples (the binary representation of each decimal value is shown in 
+parentheses):<br/>
+ 0 (0000 0000b) → all digital outputs set to low.<br/>
+ 170 (1010 1010b) → digital outputs 2,4,6,8 are set to high.<br/>
+ 255 (1111 1111b) → all digital outputs set to high.<br/>
+
+ RETURNS<br/>
+ An error code is returned as an integer if the state of the digital output channels could not be read.
+
+ #### Get Last Error Text
+const char* UNICORN_GetLastErrorText()
+
+Returns the description of the last error occurred.
+
+RETURNS<br/>
+The description of the last error occurred.
+
+#### Get Number of Acquired Channels
+int UNICORN_GetNumberOfAcquiredChannels(UNICORN_HANDLE hDevice, uint32_t 
+*numberOfAcquiredChannels)
+
+Determines the number of acquired channels.<br/>
+Uses the currently set UNICORN_AMPLIFIER_CONFIGURATION to get the number of acquired channels.
+
+PARAMETERS<br/>
+- hDevice <br/>
+The UNICORN_HANDLE associated with the session.
+- numberOfAcquiredChannels <br/>
+A pointer to a variable that receives the number of acquired 
+channels.
+
+RETURNS<br/>
+An error code is returned as an integer if the number of acquired channels could not be determined.
+
+#### Open Device
+int UNICORN_OpenDevice(const char *serial, UNICORN_HANDLE *hDevice)
+
+Connects to a certain Unicorn device and assigns a Unicorn handle if the connection attempt succeeded.
+
+PARAMETERS<br/>
+- serial <br/>
+The serial number of the device to connect to.
+- hDevice<br/>
+A pointer to a UNICORN_HANDLE that receives the handle associated with the 
+current session if the device could be opened successfully.
+
+RETURNS<br/>
+An error code is returned as an integer if the device could not be opened.
+
