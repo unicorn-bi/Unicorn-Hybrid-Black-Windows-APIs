@@ -1,4 +1,10 @@
 # UNICORN C API - C REFERENCE
+[Constants](#Constants)<br/>
+[Error Codes](#Error-Codes)<br/>
+[Type Definitions](#Type-Definitions)<br/>
+[Structures](#Structures)<br/>
+[Functions](#Functions)<br/>
+
 ## Constants
 ####  UNICORN_ACCELEROMETER_CHANNELS_COUNT<br/>
 The number of available accelerometer channels.<br/>
@@ -143,4 +149,4 @@ PUBLIC ATTRIBUTES
 -  uint8_t enclosureVersion[4]<br/>
    The enclosure version number.
 
-   ## Functions
+## Functions
