@@ -177,7 +177,7 @@ PARAMETERS<br/>
 A pointer to the handle associated with the session.<br/>
 
 RETURNS<br/>
-An error code is returned as an integer if the disconnection attempt fails
+- An error code is returned as an integer if the disconnection attempt fails
 
 ####  Get API Version
 float UNICORN_GetApiVersion()
@@ -185,7 +185,7 @@ float UNICORN_GetApiVersion()
 Returns the current API version.<br/>
 
 RETURNS<br/>
-The current API version.
+- The current API version.
 
 ####  Get Available Devices
 int UNICORN_GetAvailableDevices(UNICORN_DEVICE_SERIAL *availableDevices, uint32_t* availableDevicesCount, BOOL onlyPaired)<br/>
@@ -207,7 +207,7 @@ Scanning for paired devices only can be executed faster. If TRUE, only paired de
 discovered.<br/>
 
 RETURNS<br/>
-An error code is returned as integer if scanning for available devices fails.<br/>
+- An error code is returned as integer if scanning for available devices fails.<br/>
 
 #### Get Bluetooth Adapter Info
 int UNICORN_GetBluetoothAdapterInfo(UNICORN_BLUETOOTH_ADAPTER_INFO *bluetoothAdapterInfo)
@@ -221,7 +221,7 @@ A pointer to a UNICORN_BLUETOOTH_ADAPTER_INFO structure that
 receives information about the used Bluetooth adapter<br/>
 
 RETURNS<br/>
-An error code is returned as integer if the Bluetooth adapter information could not be acquired.
+- An error code is returned as integer if the Bluetooth adapter information could not be acquired.
 
 #### Get Channel Index
 int UNICORN_GetChannelIndex(UNICORN_HANDLE hDevice, const char *name, uint32_t *channelIndex)
@@ -246,7 +246,7 @@ The name of the requested channel.
 A pointer to a variable that receives the zero-based channel index.
 
 RETURNS<br/>
-An error code is returned as integer if the index could not be determined.
+- An error code is returned as integer if the index could not be determined.
 
 ####  Get Configuration
 int UNICORN_GetConfiguration(UNICORN_HANDLE hDevice, UNICORN_AMPLIFIER_CONFIGURATION *configuration)
@@ -262,7 +262,7 @@ The UNICORN_HANDLE associated with the session.
 A pointer to a UNICORN_AMPLIFIER_CONFIGURATION that receives the configuration of the Unicorn Brain Interface.
 
 RETURNS<br/>
-An error code is returned as an integer if the configuration could not be read.
+- An error code is returned as an integer if the configuration could not be read.
 
 #### Get Data
 int UNICORN_GetData(UNICORN_HANDLE hDevice, uint32_t numberOfScans, float *destinationBuffer, uint32_t destinationBufferLength)
@@ -284,7 +284,7 @@ Battery Level”)
 Number of floats fitting into the destination buffer.
 
 RETURNS<br/>
-An error code is returned as integer if data could not be read. 
+- An error code is returned as integer if data could not be read. 
 
 #### Get Device Information
 int UNICORN_GetDeviceInformation(UNICORN_HANDLE hDevice, UNICORN_DEVICE_INFORMATION* deviceInformation)
@@ -299,7 +299,7 @@ A pointer to a UNICORN_DEVICE_INFORMATION that receives information
 about the device.
 
 RETURNS<br/>
-An error code is returned as an integer if the device information could not be read.
+- An error code is returned as an integer if the device information could not be read.
 
 #### Get Digital Outputs
 int UNICORN_GetDigitalOutputs(UNICORN_HANDLE hDevice, uint8_t *digitalOutputs)
@@ -318,7 +318,7 @@ parentheses):<br/>
  255 (1111 1111b) → all digital outputs set to high.<br/>
 
  RETURNS<br/>
- An error code is returned as an integer if the state of the digital output channels could not be read.
+ - An error code is returned as an integer if the state of the digital output channels could not be read.
 
  #### Get Last Error Text
 const char* UNICORN_GetLastErrorText()
@@ -326,7 +326,7 @@ const char* UNICORN_GetLastErrorText()
 Returns the description of the last error occurred.
 
 RETURNS<br/>
-The description of the last error occurred.
+- The description of the last error occurred.
 
 #### Get Number of Acquired Channels
 int UNICORN_GetNumberOfAcquiredChannels(UNICORN_HANDLE hDevice, uint32_t 
@@ -343,7 +343,7 @@ A pointer to a variable that receives the number of acquired
 channels.
 
 RETURNS<br/>
-An error code is returned as an integer if the number of acquired channels could not be determined.
+- An error code is returned as an integer if the number of acquired channels could not be determined.
 
 #### Open Device
 int UNICORN_OpenDevice(const char *serial, UNICORN_HANDLE *hDevice)
@@ -358,7 +358,7 @@ A pointer to a UNICORN_HANDLE that receives the handle associated with the
 current session if the device could be opened successfully.
 
 RETURNS<br/>
-An error code is returned as an integer if the device could not be opened.
+- An error code is returned as an integer if the device could not be opened.
 
 #### Set Configuration
 int UNICORN_SetConfiguration(UNICORN_HANDLE hDevice, UNICORN_AMPLIFIER_CONFIGURATION* configuration)
@@ -372,7 +372,7 @@ The UNICORN_HANDLE associated with the session.
 A pointer to the UNICORN_AMPLIFIER_CONFIGURATION to set.
 
 RETURNS<br/>
-An error code is returned as an integer if configuration is invalid or could not be set.
+- An error code is returned as an integer if configuration is invalid or could not be set.
 
 #### Set Digital Outputs
 int UNICORN_SetDigitalOutputs(UNICORN_HANDLE hDevice, uint8_t digitalOutputs)
@@ -391,7 +391,7 @@ parentheses):<br/>
  255 (1111 1111b) → all digital outputs set to high.<br/>
 
 RETURNS<br/>
-An error code is returned as an integer if the state of the digital output channels could not be set.
+- An error code is returned as an integer if the state of the digital output channels could not be set.
 
 #### Start Acquisition
 int UNICORN_StartAcquisition(UNICORN_HANDLE hDevice, BOOL testSignalEnabled)
@@ -405,7 +405,7 @@ The UNICORN_HANDLE associated with the session.
 Enables or disables the test signal mode. TRUE to start the data acquisition in test signal mode; FALSE to start the data acquisition in measurement mode.
 
 RETURNS<br/>
-An error code is returned as an integer if data acquisition could not be started.
+- An error code is returned as an integer if data acquisition could not be started.
 
 #### Stop Acquisition
 int UNICORN_StopAcquisition(UNICORN_HANDLE hDevice)
@@ -417,4 +417,4 @@ PARAMETERS<br/>
 The UNICORN_HANDLE associated with the session.
 
 RETURNS<br/>
-An error code is returned as an integer if the acquisition could not be terminated.
+- An error code is returned as an integer if the acquisition could not be terminated.

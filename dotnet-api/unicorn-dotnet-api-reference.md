@@ -297,7 +297,8 @@ DeviceInformation GetDeviceInformation()
 Reads the device information
 
 RETURNS
-Information about the device that this instance belongs to.
+- Information about the device that this instance belongs to.
+
 - [DeviceException](#Class-DeviceException)<br/>
 Device information could not be read.
 
