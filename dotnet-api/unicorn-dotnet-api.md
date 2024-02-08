@@ -10,7 +10,7 @@ The Unicorn .NET API is a .NET application programming interface (API) that enab
 
 ## Requirements
 - NET Framework <br/> .NET Framework 4.8
-- Visual Studio<br/> Microsoft Visual Studio 2022, Desktop development for the C++ programming language
+- Visual Studio<br/> Microsoft Visual Studio 2022
 
 ## Files on your computer
 By default, the Unicorn .NET API library is installed into the Documents folder.
