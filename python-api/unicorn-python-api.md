@@ -25,7 +25,11 @@ Within this directory, subdirectories are generated containing all installed fil
 
 ## Using the Unicorn Python Api
 ## Activate License
-The Unicorn Python library requires a license key to load. Unlock the Unicorn Python API by following the instructions from  the [Licensing](TODO).
+The Unicorn Python library requires a license key to load. Unlock the Unicorn Python API by adding a license in the Unicorn Suite Hybrid Black application: Unicorn Suite Hybrid Black → Licenses → Add License.
+
+<p align="center">
+<img src="./img/unicorn-suite-add-license.png" alt="drawing" width="750"/><br/>
+</p>
 
 ## Set library path
 You must add the Unicorn Python library paths to the system environment variable PYTHONPATH to be able to use the library in Python applications.
@@ -78,7 +82,7 @@ To perform a data acquisition using the Unicorn Python API, a defined command ex
 
 2.  A connection has to be established to communicate with the Unicorn brain interface. This can be performed by creating an instance of the Unicorn class. If the instance could be created, the connection attempt was executed successfully. After connecting to a device, it is possible to interact with the device and to call all available public member functions of the Unicorn class. For example, it is possible to read the current configuration of the device, set a new configuration or start data acquisition.
 
-3.   Therefore, it is required to read the incoming data stream continuously by calling Get Data within an acquisition loop. Other API calls (except Stop Acquisition and Set Digital Outputs) are not allowed while data acquisition is running.
+3.  To start data acquisition, Start Acquisition must be called. After calling Start Acquisition, the Unicorn device is set into acquisition mode and is continuously sending data.
 
 4.  Therefore, it is necessary to read the incoming data stream continuously by calling Get Data within an acquisition loop. Other API calls (except Stop Acquisition and Set Digital Outputs) are not allowed while data acquisition is running
 

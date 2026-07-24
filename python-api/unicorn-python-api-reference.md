@@ -50,7 +50,7 @@ The total number of available channels.
 #### EEGConfigIndex
 The index of the first EEG AmplifierChannel in AmplifierConfiguration.Channels.
 #### AccelerometerConfigIndex
-The index of the first accelerometer AmplifierChannel in #### AmplifierConfiguration.Channels.
+The index of the first accelerometer AmplifierChannel in AmplifierConfiguration.Channels.
 #### GyroscopeConfigIndex
 The index of the first gyroscope AmplifierChannel in AmplifierConfiguration.Channels.
 #### BatteryConfigIndex

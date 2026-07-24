@@ -44,7 +44,7 @@ your project.
 4. Open the project properties dialog (Project → Properties).
 5. Open the C/C++ Settings (Configuration Properties → C/C++ → General).
 6. Add the path of the Unicorn C API (by default C:\Users\<username>\Documents\gtec\Unicorn 
-Suite\Unicorn CAPI\Hybrid Black\Lib) to the “Additional Include Directories”.
+Suite\Hybrid Black\Unicorn CAPI\Lib) to the “Additional Include Directories”.
 <br/>
 <p align="center">
 <img src="./img/capi3.png" alt="drawing" width="750"/><br/>

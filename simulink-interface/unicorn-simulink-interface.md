@@ -8,14 +8,14 @@ The Unicorn Simulink Interface is an interface that enables MATLAB Simulink appl
 &nbsp;&nbsp;&nbsp;[Activate license](#activate-license)<br/>
 &nbsp;&nbsp;&nbsp;[Set library path](#set-library-path)<br/>
 [Simulink](#Simulink)</br>
-[Unicorn .NET API Video Tutorial](#Unicorn-NET-API-Video-Tutorial)</br>
-[.NET API Reference](./unicorn-dotnet-api-reference.md)</br>
 &nbsp;&nbsp;&nbsp;[Unicorn Block](#unicorn-block)<br/>
 [Examples](#examples)<br/>
 &nbsp;&nbsp;&nbsp;[Demo 1](#demo-1)<br/>
 &nbsp;&nbsp;&nbsp;[Demo 2](#demo-2)<br/>
 
 ## Requirements
+- MATLAB<br/> MATLAB 2023a, Simulink
+
 ## Files on your computer
 By default, the Unicorn Simulink Interface library is installed to the Documents folder.
 - C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn Simulink<br/>
@@ -32,14 +32,17 @@ Contains application examples for the Unicorn Simulink Interface library in MATL
 
 ## Using the Unicorn Simulink Interface
 ### Activate license
-The Unicorn Python library requires a license key to load. Unlock the Unicorn Python API by following the 
-instructions from [Licensing](TODO).
+The Unicorn Simulink Interface requires a license key to load. Unlock the Unicorn Simulink Interface by adding a license in the Unicorn Suite Hybrid Black application: Unicorn Suite Hybrid Black → Licenses → Add License.
+
+<p align="center">
+<img src="./img/unicorn-suite-add-license.png" alt="drawing" width="750"/><br/>
+</p>
 
 ###  Set library path
 You must add the Unicorn Simulink Interface library paths to the MATLAB path to use the library in MATLAB 
 Simulink applications
 
-1. Open MATLAB 2013a
+1. Open MATLAB 2023a
 2. Select “Set Path” in the Home tab to modify the MATLAB path
 3. Select “Add with Subfolders” and add the Unicorn Simulink Interface library folders to the path 
 (by default C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn Simulink)
@@ -81,7 +84,7 @@ The VALID output indicates if samples are lost during the data acquisition.
 - BAT<br/>
 The BAT output provides the battery level in percent.
 - CNT<br/>
-The CNT output is provides the system counter, which is incremented with every received sample during data acquisition.
+The CNT output provides the system counter, which is incremented with every received sample during data acquisition.
 
 Dialog Box<br/>
 
@@ -99,7 +102,7 @@ Switch between testsignal and EEG (Electrode) as input source for the acquisitio
 ## Examples
 The Unicorn Simulink Interface library is delivered with example MATLAB Simulink models.
 
-1.	Open MATLAB 2017a and the “Simulink Library Browser”.
+1.	Open MATLAB 2023a and the “Simulink Library Browser”.
 2.	Select the “Unicorn” library from the dropdown menu.
 3.	Double click the “Examples” block.
 4.	Select one of the example applications.

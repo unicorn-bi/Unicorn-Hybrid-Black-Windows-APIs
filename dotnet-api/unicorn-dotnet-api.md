@@ -70,7 +70,7 @@ namespace UnicornNetAcquisitionExample
 }
  ```
 
-9.  You must copy the native Unicorn library (by default C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn DotNet\Lib\Unicorn.dll) to the execution folder of the C# application. This can be done manually or within the “Build Events” by adding the following ines to the Pre- or Post-build event command Lines
+9.  You must copy the native Unicorn library (by default C:\Users\<username>\Documents\gtec\Unicorn Suite\Hybrid Black\Unicorn DotNet\Lib\Unicorn.dll) to the execution folder of the C# application. This can be done manually or within the “Build Events” by adding the following lines to the Pre- or Post-build event command Lines
 
 ```
 echo Copying Unicorn libraries...
